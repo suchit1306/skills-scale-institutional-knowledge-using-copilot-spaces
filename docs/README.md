@@ -1,14 +1,74 @@
 # OctoAcme Project Management Docs
 
-This directory is the central hub for OctoAcme project management process documentation and provides shared context for planning, delivering, and improving cross-functional work.
+This directory is the central hub for OctoAcme project management process documentation. It gives new team members a quick view of how projects move from idea to delivery, who is involved, how teams communicate, and how quality and risk are managed along the way.
 
-OctoAcme manages projects through a structured lifecycle that starts with project initiation and carries through planning, execution, release, and retrospective learning. Teams begin by clarifying the business need, measurable goals, stakeholders, timeline, early risks, and resource needs in a lightweight one-pager. Once an initiative is approved, the team moves into planning to create a prioritized backlog, define acceptance criteria and the Definition of Done, map dependencies, and establish milestones and release plans.
+## Overview and Core Principles
 
-Delivery depends on clear role ownership across the lifecycle. Project Managers (PMs) coordinate plans, schedules, risks, dependencies, and stakeholder communication so work stays aligned and visible. Product Managers (PdMs) define the problem, prioritize the roadmap and backlog, and measure outcomes. Developers design, build, test, and review implementation details, while QA partners validate quality and feature acceptance. Stakeholders contribute requirements, decisions, and approvals at key checkpoints.
+OctoAcme uses a structured, iterative project management approach for cross-functional product, service, and integration work. Projects move through a common lifecycle of initiation, planning, execution, release, and retrospective learning so teams can stay aligned while still delivering in small, testable increments.
 
-Execution is managed through consistent team rhythms and visible tracking. OctoAcme uses project boards such as GitHub Projects with standard workflow states like Backlog, Ready, In Progress, In Review, QA, and Done. Teams review progress in daily standups, weekly delivery syncs, and sprint or milestone demos, while pull requests are expected to link to issues, include acceptance criteria, and pass automated checks before review. Progress and health are measured through delivery signals such as velocity, burndown, usage, errors, and latency, with escalation paths for blockers and business-impacting risks.
+The approach is grounded in a few consistent principles:
 
-Quality, communication, and continuous improvement are built into the process rather than treated as final steps. Teams apply unit, integration, and smoke testing where appropriate, combine CI and security scanning with manual QA when needed, and prepare release notes, rollback plans, and post-deployment verification before shipping. Communication follows a regular cadence through PM/PdM syncs, stakeholder updates, and a single source of truth for status. After milestones, releases, or incidents, teams hold retrospectives to capture lessons learned, assign action items, and improve the process iteratively.
+- **Customer-first prioritization:** focus work on customer and business value.
+- **Iterative delivery:** ship in small, testable increments instead of large handoffs.
+- **Clear ownership:** assign a named Project Manager (PM) and Product Manager (PdM)/Product Lead.
+- **Data-informed decisions:** use success metrics, delivery signals, and operational data to guide trade-offs.
+- **Psychological safety:** encourage feedback, transparency, and continuous improvement.
+
+Key artifacts across the lifecycle include the project one-pager, roadmap and release plan, prioritized backlog, acceptance criteria and Definition of Done, risk register, and retrospective action items.
+
+## Key Workflows and Processes
+
+| Stage | Purpose | Typical outputs |
+| --- | --- | --- |
+| **Initiation** | Validate the business need, define measurable goals, identify stakeholders, and decide whether to proceed. | Project one-pager, stakeholder list, communication plan, initial timeline, initial risks, resource needs |
+| **Planning** | Turn an approved idea into an actionable delivery plan. | Prioritized backlog, acceptance criteria, estimates, Definition of Done, dependency map, release timeline, initial QA approach |
+| **Execution & Tracking** | Deliver work in visible increments while managing progress, blockers, and quality. | Updated project board, small PRs linked to issues, demos/reviews, metrics dashboards, weekly risk updates |
+| **Release & Deployment** | Ship changes safely and communicate readiness and outcomes. | Passing CI and security scans, release notes, rollback plan, smoke test results, stakeholder announcement |
+| **Retrospective & Continuous Improvement** | Capture lessons learned and turn them into follow-up actions. | Retrospective notes, prioritized action items, owners, due dates, success criteria |
+
+## Personas and Roles
+
+- **Project Managers (PMs):** coordinate delivery plans, schedules, risks, dependencies, meetings, and stakeholder communication.
+- **Product Managers (PdMs)/Product Leads:** define the problem, set goals and success metrics, prioritize the roadmap and backlog, and measure outcomes.
+- **Developers:** design, build, test, review, and document implementation work while helping estimate scope and identify technical risks.
+- **QA/Testing partners:** validate quality, confirm acceptance criteria, and support feature acceptance and release readiness.
+- **Stakeholders and sponsors:** provide requirements, decisions, approvals, and escalation support at key checkpoints.
+
+## Communication Strategies and Cadence
+
+OctoAcme uses a predictable communication rhythm so teams can stay aligned without losing momentum:
+
+- **Daily standups (15 minutes):** progress, blockers, and dependencies
+- **Weekly PM/PdM and delivery syncs:** scope alignment, risk review, status updates, and decisions
+- **Sprint or milestone demos/reviews:** show progress and gather feedback
+- **Monthly stakeholder updates:** communicate health, milestones, and decisions needed
+- **Ad-hoc escalations:** raise urgent blockers, incidents, or business-impacting risks quickly
+
+Teams are expected to keep a single source of truth for status, such as the project README, project board, or release documentation. Weekly updates typically cover progress, next steps, risks or blockers, and asks or decisions needed.
+
+## Quality Assurance and Testing Practices
+
+Quality is built into delivery rather than left until the end:
+
+- write **unit tests** for new logic
+- add **integration tests** where systems or components interact
+- run **end-to-end smoke tests** for critical flows before release
+- require **automated tests and linting in CI** before review
+- run **security scanning in CI**
+- use **manual QA** when feature acceptance or workflow validation requires it
+
+During execution, pull requests should stay small when possible, link to the relevant issue, include acceptance criteria, and receive at least one approval before merging, unless the team defines a stricter policy.
+
+## Risk Management and Escalation
+
+Risk management starts during planning and continues through execution and release. Teams maintain a risk register with an ID, description, impact, likelihood, owner, mitigation plan, and status. Risks are reviewed regularly in weekly syncs and updated as conditions change.
+
+Escalation follows a clear path:
+
+1. **Team-level triage** during daily execution for routine blockers
+2. **PM escalation** to the Product Lead and dependent teams for cross-team or schedule risks
+3. **Sponsor-level escalation** for business-impacting issues
+4. **Security incident escalation** through the security incident runbook and Security on-call
 
 ## Process Documents
 
